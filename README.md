@@ -1,73 +1,84 @@
-# React + TypeScript + Vite
+# Atlas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A solo travel planner web app. Plan trips, track bookings and expenses, and keep documents organised in one place.
 
-Currently, two official plugins are available:
+**Live:** https://atlas-omega-dusky.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- **React 19** + **TypeScript 6**
+- **Vite 8** — dev server and build
+- **React Router v7** — client-side routing
+- **CSS Modules** — scoped styles, no CSS-in-JS
+- No UI library, no charting library — everything is custom
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting started
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+App runs at `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm run build   # production build
+npm run preview # preview the production build locally
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project structure
+
+```
+src/
+├── App.tsx               # Router definition
+├── data/
+│   └── mock.ts           # All mock data and TypeScript types
+├── components/
+│   └── layout/
+│       ├── AppLayout.tsx # Shell with sidebar + main outlet
+│       └── Sidebar.tsx   # Nav, upcoming trips, user footer
+└── pages/
+    ├── Landing.tsx        # /
+    ├── Dashboard.tsx      # /dashboard
+    ├── Trips.tsx          # /trips
+    ├── NewTrip.tsx        # /trips/new
+    ├── Documents.tsx      # /documents
+    ├── Settings.tsx       # /settings
+    └── trip/
+        ├── TripDetail.tsx     # /trips/:id  (tab chrome)
+        ├── TripOverview.tsx   # index tab
+        ├── TripItinerary.tsx  # /itinerary
+        ├── TripBookings.tsx   # /bookings
+        ├── TripExpenses.tsx   # /expenses
+        └── TripDocuments.tsx  # /documents
+```
+
+## Routes
+
+| Path | Page |
+|------|------|
+| `/` | Landing |
+| `/dashboard` | Dashboard |
+| `/trips` | Trip list |
+| `/trips/new` | New trip form |
+| `/trips/:id` | Trip overview |
+| `/trips/:id/itinerary` | Itinerary |
+| `/trips/:id/bookings` | Bookings |
+| `/trips/:id/expenses` | Expenses |
+| `/trips/:id/documents` | Trip documents |
+| `/documents` | Personal documents |
+| `/settings` | Settings |
+
+## Design tokens
+
+Global CSS variables are defined in `src/index.css`:
+
+```css
+--bg: #0a0a0a
+--bg-elevated: #111111
+--bg-card: #181818
+--border: #222222
+--accent: #f05535
+--text: #ffffff
+--text-muted: #606060
 ```

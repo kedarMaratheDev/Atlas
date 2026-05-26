@@ -12,22 +12,6 @@ function GoogleIcon() {
   )
 }
 
-function SunIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <circle cx="12" cy="12" r="4"/>
-      <line x1="12" y1="2" x2="12" y2="6"/>
-      <line x1="12" y1="18" x2="12" y2="22"/>
-      <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
-      <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
-      <line x1="2" y1="12" x2="6" y2="12"/>
-      <line x1="18" y1="12" x2="22" y2="12"/>
-      <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/>
-      <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
-    </svg>
-  )
-}
-
 export default function Landing() {
   return (
     <div className={styles.page}>
@@ -36,33 +20,9 @@ export default function Landing() {
           <span className={styles.navLogoIcon} aria-hidden="true" />
           <span className={styles.navLogoText}>Atlas</span>
         </div>
-        <button className={styles.themeToggle} aria-label="Toggle theme">
-          <SunIcon />
-        </button>
       </header>
 
       <main className={styles.hero}>
-        {/* Floating preview card — top left */}
-        <div className={`${styles.previewCard} ${styles.cardLeft}`}>
-          <div className={styles.cardMeta}>
-            <span className={styles.cardIcon} data-type="transit" aria-hidden="true">↑</span>
-            <span>Day 1 · 14:35</span>
-          </div>
-          <div className={styles.cardTitle}>Haneda → city centre</div>
-          <div className={styles.cardSub}>Limousine bus · 90 min</div>
-        </div>
-
-        {/* Floating preview card — bottom right */}
-        <div className={`${styles.previewCard} ${styles.cardRight}`}>
-          <div className={styles.cardMeta}>
-            <span className={styles.cardIcon} data-type="hotel" aria-hidden="true">⌂</span>
-            <span>Day 1 · 18:00</span>
-          </div>
-          <div className={styles.cardTitle}>Hotel Niwa Tokyo</div>
-          <div className={styles.cardSub}>Booked · 7 nights · ¥164,300</div>
-        </div>
-
-        {/* Center content */}
         <div className={styles.content}>
           <div className={styles.badge}>
             <span className={styles.badgeDot} aria-hidden="true" />
@@ -70,14 +30,12 @@ export default function Landing() {
           </div>
 
           <h1 className={styles.headline}>
-            Your trip. <span className={styles.accent}>All</span>
-            <br />
+            Your trip. <span className={styles.accent}>All</span>{' '}
             <span className={styles.accent}>in one place.</span>
           </h1>
 
           <p className={styles.subtext}>
             Atlas keeps your itinerary, bookings, expenses and travel
-            <br />
             documents together — calm, private, and built for travelling alone.
           </p>
 
