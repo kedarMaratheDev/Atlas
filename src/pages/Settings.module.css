@@ -1,0 +1,204 @@
+.page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 700px;
+}
+
+.title { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+.subtitle { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+
+/* ── Card stack ─────────────────────────────── */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cardTitle {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+/* ── Profile ────────────────────────────────── */
+.profileRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.profileInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profileName {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.profileEmail {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.googleBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 5px 10px;
+}
+
+/* ── Preferences ────────────────────────────── */
+.prefList {
+  display: flex;
+  flex-direction: column;
+}
+
+.prefRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.prefDivider {
+  height: 1px;
+  background: var(--border);
+}
+
+.prefLabel {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.select {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.select:hover { border-color: #444; }
+
+/* ── Segmented control ──────────────────────── */
+.segmented {
+  display: flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.segBtn {
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--text-muted);
+  transition: background 0.12s, color 0.12s;
+}
+.segBtn + .segBtn {
+  border-left: 1px solid var(--border);
+}
+.segBtn:hover { color: var(--text); }
+
+.segActive {
+  background: #2a2a2a;
+  color: var(--text);
+}
+
+/* ── Session ────────────────────────────────── */
+.sessionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.sessionInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sessionLabel {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.sessionSub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.signOutBtn {
+  padding: 7px 16px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s;
+}
+.signOutBtn:hover {
+  color: #ef4444;
+  border-color: #ef4444;
+}
+
+/* ── Footer ─────────────────────────────────── */
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-subtle);
+  padding-top: 4px;
+}
+
+.footerDot { color: var(--text-subtle); }
+
+.footerLink {
+  color: var(--text-subtle);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footerLink:hover { color: var(--text-muted); }

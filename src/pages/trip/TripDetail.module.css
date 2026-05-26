@@ -1,0 +1,164 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── Breadcrumb ─────────────────────────────── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 24px 0;
+  font-size: 13px;
+}
+
+.breadcrumbLink {
+  color: var(--text-muted);
+  transition: color 0.15s;
+}
+.breadcrumbLink:hover { color: var(--text); }
+
+.breadcrumbSep  { color: var(--text-subtle); font-size: 12px; }
+.breadcrumbCurrent { color: var(--text-muted); }
+
+/* ── Hero ───────────────────────────────────── */
+.hero {
+  position: relative;
+  height: 210px;
+  margin: 10px 24px 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px 18px;
+  flex-shrink: 0;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.08) 0%,
+    rgba(0,0,0,0.50) 55%,
+    rgba(0,0,0,0.78) 100%
+  );
+  pointer-events: none;
+}
+
+.heroTop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.upcomingBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+.upcomingDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.daysAway {
+  font-size: 12px;
+  color: rgba(255,255,255,0.50);
+}
+
+.heroBottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.heroTitle {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.heroMeta {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.calIcon { font-size: 10px; opacity: 0.6; }
+.sep     { opacity: 0.4; }
+
+/* ── Tabs ───────────────────────────────────── */
+.tabs {
+  display: flex;
+  gap: 0;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--border);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 14px;
+  font-size: 13px;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.tab:hover { color: var(--text); }
+
+.tabActive {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.tabIcon {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.tabBadge {
+  font-size: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+  color: var(--text-muted);
+}
+
+.tabActive .tabBadge {
+  border-color: #333;
+}
+
+/* ── Content ────────────────────────────────── */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}

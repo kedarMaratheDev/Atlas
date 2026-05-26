@@ -1,0 +1,228 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: radial-gradient(ellipse at 68% 52%, #1a0b06 0%, #0a0a0a 62%);
+  overflow: hidden;
+}
+
+/* ── Nav ───────────────────────────────────────── */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  flex-shrink: 0;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navLogoIcon {
+  width: 20px;
+  height: 20px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.navLogoText {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.themeToggle {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: color 0.15s, background 0.15s;
+}
+
+.themeToggle:hover {
+  color: var(--text);
+  background: #222;
+}
+
+/* ── Hero ──────────────────────────────────────── */
+.hero {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Floating preview cards ────────────────────── */
+.previewCard {
+  position: absolute;
+  width: 240px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  pointer-events: none;
+}
+
+.cardLeft {
+  top: 16%;
+  left: 5.5%;
+}
+
+.cardRight {
+  bottom: 22%;
+  right: 3%;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.cardIcon {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 2px;
+}
+
+.cardSub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ── Center content ────────────────────────────── */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  max-width: 600px;
+  padding: 0 24px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 14px;
+  border: 1px solid #2e2e2e;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 28px;
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.headline {
+  font-size: clamp(52px, 5.5vw, 72px);
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.subtext {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #888;
+  margin-bottom: 36px;
+}
+
+.googleBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  min-width: 280px;
+  justify-content: center;
+  transition: background 0.15s, box-shadow 0.15s;
+  margin-bottom: 14px;
+}
+
+.googleBtn:hover {
+  background: #f5f5f5;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.legal {
+  font-size: 12px;
+  color: #555;
+}
+
+.legalLink {
+  color: #777;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legalLink:hover {
+  color: #aaa;
+}
+
+/* ── Footer ────────────────────────────────────── */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  font-size: 12px;
+  color: #444;
+  flex-shrink: 0;
+  border-top: 1px solid #161616;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.footerLink {
+  color: #444;
+  transition: color 0.15s;
+}
+
+.footerLink:hover {
+  color: #888;
+}

@@ -1,0 +1,206 @@
+.page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Header ─────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.title { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+.subtitle { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+.actions { display: flex; gap: 8px; }
+
+.exportBtn {
+  padding: 8px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-muted);
+  transition: color 0.15s;
+}
+.exportBtn:hover { color: var(--text); }
+
+.addBtn {
+  padding: 8px 16px;
+  background: var(--accent);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  transition: opacity 0.15s;
+}
+.addBtn:hover { opacity: 0.88; }
+
+/* ── KPI row ────────────────────────────────── */
+.kpiRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.kpi {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.kpiLabel {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.kpiValue {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: var(--text);
+  line-height: 1.1;
+  margin: 4px 0 2px;
+}
+
+.kpiCur {
+  font-size: 18px;
+  font-weight: 400;
+  vertical-align: super;
+  margin-right: 1px;
+}
+
+.kpiSub {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.kpiBar {
+  height: 3px;
+  background: #1e1e1e;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: auto;
+}
+
+.kpiBarFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+/* ── Charts ─────────────────────────────────── */
+.chartsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.chartCard {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chartTitle { font-size: 13px; font-weight: 600; }
+
+.chartTotal { font-size: 12px; color: var(--text-muted); }
+
+/* ── Donut / legend ─────────────────────────── */
+.categoryBody {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+}
+
+.legendRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legendDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legendName {
+  font-size: 12px;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.legendAmt {
+  font-size: 12px;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Bar chart ──────────────────────────────── */
+.barChart {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 140px;
+}
+
+.barCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+}
+
+.barWrap {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bar {
+  width: 100%;
+  background: var(--accent);
+  border-radius: 3px 3px 0 0;
+  opacity: 0.85;
+  min-height: 2px;
+  transition: opacity 0.15s;
+}
+.barCol:hover .bar { opacity: 1; }
+
+.barLabel {
+  font-size: 10px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}

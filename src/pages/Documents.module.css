@@ -1,0 +1,211 @@
+.page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Header ─────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.title { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+.subtitle { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+
+.actions { display: flex; gap: 8px; align-items: center; }
+
+.themeBtn {
+  width: 34px;
+  height: 34px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s;
+}
+.themeBtn:hover { color: var(--text); }
+
+.uploadBtn {
+  padding: 8px 16px;
+  background: var(--accent);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  transition: opacity 0.15s;
+}
+.uploadBtn:hover { opacity: 0.88; }
+
+/* ── Filters ────────────────────────────────── */
+.filterRow {
+  display: flex;
+  align-items: center;
+}
+
+.filters {
+  display: flex;
+  gap: 6px;
+}
+
+.filterBtn {
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--text-muted);
+  background: transparent;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.filterBtn:hover { color: var(--text); }
+
+.filterActive {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+.filterCount {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* ── Upload zone ────────────────────────────── */
+.dropZone {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.dropZone:hover {
+  border-color: #444;
+  background: var(--bg-elevated);
+}
+
+.uploadIcon {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.uploadText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.uploadPrimary {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.uploadSub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.browseBtn {
+  padding: 7px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text);
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.browseBtn:hover { background: #222; }
+
+/* ── Document grid ──────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.docCard {
+  position: relative;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.docCard:hover {
+  border-color: #333;
+  transform: translateY(-1px);
+}
+
+.docCategoryBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 7px;
+}
+
+.docIconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0 8px;
+}
+
+.docIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.docInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.docName {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.docMeta {
+  font-size: 11px;
+  color: var(--text-muted);
+}
